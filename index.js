@@ -2,13 +2,15 @@ import { ethers } from "./ethers-5.6.esm.min.js"
 import { abi, contractAddress } from "./constants.js"
 
 const connectButton = document.getElementById("connectButton")
-const withdrawButton = document.getElementById("withdrawButton")
 const fundButton = document.getElementById("fundButton")
+const withdrawButton = document.getElementById("withdrawButton")
 const balanceButton = document.getElementById("balanceButton")
+
 connectButton.onclick = connect
 withdrawButton.onclick = withdraw
 fundButton.onclick = fund
 balanceButton.onclick = getBalance
+
 
 async function connect() {
   if (typeof window.ethereum !== "undefined") {
